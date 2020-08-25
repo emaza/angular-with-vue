@@ -1,0 +1,17 @@
+<p>This is the partial for view 1.</p>
+counter
+<div counter-wrapper>
+    <div ng-non-bindable>
+        <!-- This part is managed by Vuejs-->
+        <counter :initial-count-value="initialCountValue" v-on:increment="updateCountValue"
+            v-on:decrement="updateCountValue" v-on:countupdated="updateCountValue"></counter>
+    </div>
+
+    <br><br>
+    <!-- This part is managed by Angular-->
+    Counter value: {{countValue}} <br>
+    <button ng-click="decrementCount()" type="button">Decrement by 10</button>
+    <button ng-click="incrementCount()" type="button">Increment by 10</button>
+
+<!-- rangedate-picker:
+    <rangedate-picker @events="events"></rangedate-picker> -->
